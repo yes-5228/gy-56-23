@@ -208,7 +208,7 @@ main {
 
 .budget-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -223,6 +223,14 @@ main {
 .budget-grid b {
   display: block;
   color: #17202a;
+}
+
+.budget-total {
+  background: #e7f2ef !important;
+}
+
+.budget-total b {
+  color: #0f766e;
 }
 
 .progress-row {

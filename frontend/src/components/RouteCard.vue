@@ -9,9 +9,11 @@
     </div>
     <p class="description">{{ route.description }}</p>
     <div class="budget-grid">
-      <span>基础费用 <b>¥{{ route.base_cost }}</b></span>
+      <span>交通费用 <b>¥{{ route.transport_cost }}</b></span>
+      <span>住宿费用 <b>¥{{ route.hotel_cost }}</b></span>
       <span>门票合计 <b>¥{{ route.ticket_total }}</b></span>
-      <span>预计总价 <b>¥{{ route.estimated_cost }}</b></span>
+      <span>导游服务费 <b>¥{{ route.guide_fee }}</b></span>
+      <span class="budget-total">预计总价 <b>¥{{ route.estimated_cost }}</b></span>
     </div>
     <div class="progress-row">
       <span>已报名 {{ route.enrolled_count }}/{{ route.min_group_size }}</span>

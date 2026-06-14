@@ -17,6 +17,8 @@ class TravelRoute(models.Model):
     hotel_level = models.CharField("住宿标准", max_length=80)
     min_group_size = models.PositiveIntegerField("最低成团人数", default=4)
     max_group_size = models.PositiveIntegerField("最多人数", default=20)
+    transport_cost = models.DecimalField("交通费用", max_digits=10, decimal_places=2, default=0)
+    hotel_cost = models.DecimalField("住宿费用", max_digits=10, decimal_places=2, default=0)
     base_cost = models.DecimalField("基础费用", max_digits=10, decimal_places=2)
     guide_fee = models.DecimalField("导游服务费", max_digits=10, decimal_places=2, default=0)
     status = models.CharField("状态", max_length=20, choices=STATUS_CHOICES, default="draft")
@@ -36,7 +38,7 @@ class TravelRoute(models.Model):
 
     @property
     def estimated_cost(self):
-        return self.base_cost + self.guide_fee + self.ticket_total
+        return self.base_cost + self.transport_cost + self.hotel_cost + self.guide_fee + self.ticket_total
 
     @property
     def enrolled_count(self):

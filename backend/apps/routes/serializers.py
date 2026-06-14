@@ -33,6 +33,8 @@ class TravelRouteSerializer(serializers.ModelSerializer):
             "min_group_size",
             "max_group_size",
             "base_cost",
+            "transport_cost",
+            "hotel_cost",
             "guide_fee",
             "ticket_total",
             "estimated_cost",

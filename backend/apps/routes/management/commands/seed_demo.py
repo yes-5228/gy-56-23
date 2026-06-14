@@ -71,6 +71,8 @@ class Command(BaseCommand):
                 "min_group_size": 6,
                 "max_group_size": 18,
                 "base_cost": Decimal("980"),
+                "transport_cost": Decimal("360"),
+                "hotel_cost": Decimal("480"),
                 "guide_fee": Decimal("120"),
                 "status": "forming",
                 "description": "串联西湖、灵隐寺与宋城演艺，适合家庭和轻度文化游。",
